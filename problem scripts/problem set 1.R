@@ -48,6 +48,7 @@ t.test(set3,set4)
 plot(set3,col='red',pch=".",ylab = "possibility of correct answers")
 par(new=TRUE)
 plot(set4,col='blue',pch=".",ylab='')
+
 #=======
 0.25^10*0.75^10*choose(20,10)
 p_passing=0
