@@ -20,6 +20,8 @@ for (i in 1:1000){
   sssd<-c(sssd,sd(popsample))
 }
 hist(ssd)
+sssd<-sum(ssd<5)
+
 hist(smean)
 mean(ssd)
 hist(smean,col="red",ylim = c(0,400),xlim=c(95,105))
