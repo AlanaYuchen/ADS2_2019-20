@@ -1,3 +1,4 @@
+## checked
 # Rolling dice
 result<-c()
 for(i in 1:1000){
@@ -36,8 +37,35 @@ for (i in 1:100){
   }
   list <- c(list,sum)
 }
-hist(list,col='pink',main = 'Bean Machine',breaks = 0:80)
+list<-c()
+#Mela
+for (i in 1:100){
+  s<-sum(sample(c(0,1),50,replace = T, prob = c(0.2,0.8)))
+  list<-c(list,s)
+}
+
+hist(list,col='pink',main = 'Bean Machine',breaks = 0:80,axes = F)
 summary(list)
 sum(list==1)
 
 # Class grade
+score<-c()
+for (i in 1:30){
+  s<-sample(0:1,10,prob = c(0.75,0.25),replace = T)
+  score<-c(score,sum(s))
+}
+av<-c()
+for (i in 1:1000){
+  st<-sample(score,10,replace = F)
+  av<-c(av,sum(st)/10)
+}
+hist(av)
+
+# question number maximization
+score<-c()
+for (i in 1:300){
+  s<-sample(0:1,1000,prob = c(0.75,0.25),replace = T)
+  score<-c(score,sum(s))
+}
+
+hist(score,breaks = 0:1000)

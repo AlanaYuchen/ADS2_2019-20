@@ -1,0 +1,53 @@
+---
+title: 'Mouse health record for July 2019'
+author: "Yuchen Cheng"
+date: "2019/07/31"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+mouse_report<-read.csv("/Users/chenghui/Documents/ADS2/material/ADS2 week 12/problemset12/mouse_report.csv")
+```
+The mean weight of mice is `r mean(mouse_report$weight)`g.
+
+The mean age of mice is `r mean(mouse_report$age)`months.
+
+```{r, include=FALSE}
+library(ggplot2)
+a<-ggplot(mouse_report,aes(x=genotype,y= weight))
+a1<-a+geom_boxplot(outlier.shape = NA)+
+  geom_jitter()+
+  labs(title = 'Weight by genotype')+
+  aes(color=genotype)
+  
+png(file= '/Users/chenghui/Documents/ADS2/material/ADS2 week 12/problemset12/wa.png',width=400, height=300)
+a1
+dev.off()
+```
+
+![the relation ship between mouse weight and age](/Users/chenghui/Documents/ADS2/material/ADS2 week 12/problemset12/wa.png)
+
+#Fun with math
+
+there are some \( \textbf{some text} \) kuohao
+
+\( \textbf{sdef} \)
+
+\(\frac{1}{2}\)
+
+\(A = \frac{d^2\pi}{4} \)
+
+\(E = mc^2\)
+
+\(K_d=\frac{k_b}{k_f}\)
+
+\(v=\frac{v_{max}[S]}{K_M+[S]}\)
+
+\(\sigma=var^(\frac{1}{2})\)
+
+\(\mu=\frac{1}{n}\sum_{k=1}^{n}x_k\)
+
