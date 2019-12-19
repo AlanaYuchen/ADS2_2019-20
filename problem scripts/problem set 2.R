@@ -46,6 +46,8 @@ for (i in 1:300){
   }
   if (answer =="F"){
     no = no+1
+  }else{
+    i=300
   }
 }
 yes 
