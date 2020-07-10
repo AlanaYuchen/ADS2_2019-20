@@ -44,7 +44,7 @@ for (i in 1:100){
   list<-c(list,s)
 }
 
-hist(list,col='pink',main = 'Bean Machine',breaks = 0:80,axes = F)
+hist(list,col='pink',main = 'Bean Machine')
 summary(list)
 sum(list==1)
 

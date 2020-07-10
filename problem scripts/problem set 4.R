@@ -27,7 +27,7 @@ y[idx]=y[idx]+rnorm(length(idx))
 plot(x,y,col='yellowgreen',pch='.')
 
 # DNA sequence
-DNA <-sample(c('C','G','T','A'),100,replace=T,prob = c(0.25,0.3,0.2,0.25))
+DNA <-paste(sample(c('C','G','T','A'),100,replace=T,prob = c(0.25,0.3,0.2,0.25)),collapse = '')
 paste(DNA,collapse = '')
 paste0(DNA,collapse = '')
 as.character(DNA,collapse = '')
@@ -35,5 +35,6 @@ DNA<-paste(DNA,collapse = '') # sep = can be used to separate the character in D
                               #while collapse can connect all the characters together and insert the charcter in ''in the whole string
   
 install.packages('BiocManager')
-library('RBioinf')
+library(RBioinf)
+library()
 randDNA(100)
